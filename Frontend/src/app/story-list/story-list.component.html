@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Newest Stories</h1>
+  <div class="search-bar">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search stories..." />
+    <button (click)="onSearch()">Search</button>
+  </div>
+  <div class="story-list">
+    <ng-container *ngFor="let story of stories">
+      <div class="story-item" *ngIf="story.url && story.url.trim() !== ''">
+        <h3>
+          <a [href]="story.url" target="_blank" rel="noopener noreferrer">{{ story.title }}</a>
+        </h3>
+      </div>
+    </ng-container>
+  </div>
+  <div class="pagination">
+    <button [disabled]="pageNumber === 1" (click)="onPageChange(pageNumber - 1)">Previous</button>
+    <button *ngFor="let page of pages()" [class.active]="page === pageNumber" (click)="onPageChange(page)">{{ page
+      }}</button>
+    <button [disabled]="pageNumber === totalPages" (click)="onPageChange(pageNumber + 1)">Next</button>
+  </div>
+</div>
