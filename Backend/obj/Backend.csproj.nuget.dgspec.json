@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omarm\\Desktop\\NexTech\\Backend\\Backend.csproj": {}
+    "C:\\Users\\Omarm\\Desktop\\NexTech\\backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omarm\\Desktop\\NexTech\\Backend\\Backend.csproj": {
+    "C:\\Users\\Omarm\\Desktop\\NexTech\\backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omarm\\Desktop\\NexTech\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Omarm\\Desktop\\NexTech\\backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\Omarm\\Desktop\\NexTech\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\Omarm\\Desktop\\NexTech\\backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\Omarm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omarm\\Desktop\\NexTech\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\Omarm\\Desktop\\NexTech\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Omarm\\AppData\\Roaming\\NuGet\\NuGet.Config"

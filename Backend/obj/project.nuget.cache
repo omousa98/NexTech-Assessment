@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NAH7PjYQtDE=",
+  "dgSpecHash": "lHQxN/vvYEc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Omarm\\Desktop\\NexTech\\Backend\\Backend.csproj",
+  "projectFilePath": "C:\\Users\\Omarm\\Desktop\\NexTech\\backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Omarm\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\Omarm\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
