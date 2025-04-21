@@ -51,12 +51,3 @@ This project is a full-stack application consisting of an Angular front-end and 
    ```
    dotnet test
    ```
-
-#### Front-end Tests
-1. Navigate to the `Frontend` directory:
-   ```
-   cd Frontend
-   ```
-2. Run the Angular tests:
-   ```
-   ng test
