@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy ASP.Net Core app to Azure Web App - NexTechOmarMousa
 
 on:
@@ -9,11 +6,14 @@ on:
       - master
   workflow_dispatch:
 
+env:
+  PUBLISH_OUTPUT: 'publish_output'  # Define a consistent output folder name
+
 jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -27,13 +27,13 @@ jobs:
         run: dotnet build Backend/Backend.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Backend/Backend.csproj -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        run: dotnet publish Backend/Backend.csproj -c Release -o ${{env.PUBLISH_OUTPUT}}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ${{env.PUBLISH_OUTPUT}}
 
   deploy:
     runs-on: windows-latest
@@ -47,6 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: .net-app
+          path: ${{env.PUBLISH_OUTPUT}}  # Download to same folder structure
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -54,5 +55,5 @@ jobs:
         with:
           app-name: 'NexTechOmarMousa'
           slot-name: 'Production'
-          package: ${{env.DOTNET_ROOT}}/myapp
+          package: ${{env.PUBLISH_OUTPUT}}  # Point to the published output
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_22DBB823175343EAB50C7703DF3A9CA4 }}
